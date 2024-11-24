@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('./font.woff2') format('woff2');
+}
+
+.iconfont {
+  font-family: 'iconfont' !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-baitian:before {
+  content: '\e67f';
+}
+
+.icon-gensuixitong:before {
+  content: '\e947';
+}
+
+.icon-yewan:before {
+  content: '\e67e';
+}
+
+.icon-less:before {
+  content: '\f1e6';
+}
+
+.icon-vue:before {
+  content: '\e69a';
+}
+
+.icon-vercel:before {
+  content: '\e669';
+}
+
+.icon-vite:before {
+  content: '\e66b';
+}
+
+.icon-vuesax-linear-vuesax:before {
+  content: '\e64f';
+}
+
+.icon-baojiaquotation:before {
+  content: '\e63b';
+}
+
+.icon-baojiaquotation2:before {
+  content: '\e63d';
+}
+
+.icon-youjian1:before {
+  content: '\e63c';
+}
+
+.icon-wangyiyunyinle1:before {
+  content: '\e602';
+}
+
+.icon-github:before {
+  content: '\e63a';
+}
+
+.icon-guanyu:before {
+  content: '\e60b';
+}
+
+.icon-bilibili:before {
+  content: '\e600';
+}
+
+.icon-wodeboke:before {
+  content: '\e608';
+}

@@ -1,0 +1,37 @@
+{
+  "author": "小莫唐尼",
+  "avatar": "https://blog.925i.cn/upload/avatar.jpg",
+  "description": "小莫唐尼，一个爱凑热闹，喜欢捣鼓前端的程序员！",
+  "keywords": [
+    "小莫唐尼",
+    "小莫",
+    "小莫唐尼的博客",
+    "小莫唐尼的前端博客"
+  ],
+  "logo": "https://blog.925i.cn/upload/avatar.jpg",
+  "icp": "桂ICP备17000465号-4",
+  "copyright": "Copyright © 2024 ",
+  "websites": [
+    {
+      "group": "个人站点",
+      "title": "个人主页",
+      "logo": "",
+      "desc": "前端开发技术博客",
+      "url": "https://www.xiaoxiaomo.cn/"
+    },
+    {
+      "group": "个人站点",
+      "title": "我的博客",
+      "logo": "",
+      "desc": "前端开发技术博客",
+      "url": "https://blog.925i.cn/"
+    },
+    {
+      "group": "开源项目",
+      "title": "uni-halo 文档",
+      "logo": "",
+      "desc": "uni-halo 开源免费多端编译文档",
+      "url": "https://uni-halo.925i.cn/"
+    }
+  ]
+}
