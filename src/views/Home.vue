@@ -72,18 +72,16 @@
         >
           <i class="iconfont icon-guanyu"></i>
 
-          <template #animate> 关于 </template>
+          <template #animate> 关于</template>
         </vs-button>
       </div>
     </div>
 
     <div class="footer flex items-center justify-center gap-x-1">
-      <span>—</span>
       <span>2022-2024</span>
       <a href="/" target="_self" :title="config.author">{{ config.author }}</a>
       <span>丨</span>
       <a href="https://beian.miit.gov.cn/" target="_blank">{{ config.icp }}</a>
-      <span>—</span>
     </div>
 
     <!--  弹窗信息  -->
@@ -177,7 +175,7 @@ const btnList = ref([
     icon: 'icon-wodeboke',
     animate: '博客',
     color: '#fe8599',
-    href: 'https://blog.quenan.love',
+    href: 'https://blog.925i.cn/',
   },
   {
     icon: 'icon-github',
@@ -288,7 +286,6 @@ function getSiteConfig() {
   fetch('/config/index.json')
     .then((res) => res.json())
     .then((res) => {
-      console.log('获取站点配置：', res)
       Object.assign(config, res)
       document.title = res.author
     })
@@ -341,4 +338,13 @@ function handleShowVersion() {
 
 <style lang="less">
 @import url(../assets/iconfont/font.css);
+
+.footer {
+  a:hover {
+    color: #409eff;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: #409eff;
+  }
+}
 </style>
