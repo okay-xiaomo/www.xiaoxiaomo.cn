@@ -23,8 +23,8 @@ function handleShowNotify() {
     const notify = new Notify({
       title: '站长推荐',
       body: 'uni-halo 免费开源，点击图片查看。',
-      badge: 'https://uni-halo.925i.cn/logo.png',
-      icon: 'https://uni-halo.925i.cn/logo.png',
+      badge: '/logo.png',
+      icon: '/logo.png',
       image: 'https://uni-halo.925i.cn/images/uni-halo2.x.jpg',
       requireInteraction: !localStorage.getItem(notify_show),
       autoClose: false,

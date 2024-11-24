@@ -15,6 +15,9 @@ import { MotionPlugin } from '@vueuse/motion'
 import 'vuesax-alpha/dist/index.css'
 import 'vuesax-alpha/theme-chalk/dark/css-vars.css'
 
+import DisableDevtool from 'disable-devtool'
+
+DisableDevtool()
 
 const app = createApp(App)
 
