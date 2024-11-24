@@ -82,6 +82,8 @@
       <a href="/" target="_self" :title="config.author">{{ config.author }}</a>
       <span>丨</span>
       <a href="https://beian.miit.gov.cn/" target="_blank">{{ config.icp }}</a>
+      <span>丨</span>
+      <a target="_blank" title="51la网站统计" href="https://v6.51.la/s/GPZ3G9xLtawiqLD"><img class="s-51la-image" src="https://sdk.51.la/icon/1-1.png"></a>
     </div>
 
     <!--  弹窗信息  -->
@@ -392,5 +394,9 @@ function handlePlayCatSound() {
     right: 0;
     z-index: -1;
   }
+}
+
+.s-51la-image{
+  width: 50px;
 }
 </style>
