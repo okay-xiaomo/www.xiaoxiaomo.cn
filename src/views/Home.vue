@@ -151,6 +151,12 @@
         </div>
       </template>
     </vs-dialog>
+
+    <img
+      class="cat w-36 hover:scale-150 origin-bottom-right transition-transform duration-300 fixed right-6 bottom-0"
+      src="@/assets/images/cat_cursor.gif"
+      alt="cat"
+    />
   </div>
 </template>
 
@@ -345,6 +351,17 @@ function handleShowVersion() {
     text-decoration-line: underline;
     text-decoration-style: dashed;
     text-decoration-color: #409eff;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #app .main .info .infoText {
+    margin-left: 0px;
+  }
+
+  .cat {
+    right: 0;
+    z-index: -1;
   }
 }
 </style>
