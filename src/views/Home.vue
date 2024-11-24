@@ -153,6 +153,7 @@
     </vs-dialog>
 
     <img
+      @mouseenter="handlePlayCatSound"
       class="cat w-36 hover:scale-150 origin-bottom-right transition-transform duration-300 fixed right-6 bottom-0"
       src="@/assets/images/cat_cursor.gif"
       alt="cat"
@@ -165,6 +166,12 @@ import { onMounted, reactive, ref } from 'vue'
 import { VsNotification } from 'vuesax-alpha'
 import { useTheme } from '@/hooks/theme'
 import { sound } from '@pixi/sound'
+
+interface ISound {
+  id: string
+  path: string
+  volume: number
+}
 
 const { currentTheme, setTheme } = useTheme()
 
@@ -339,6 +346,28 @@ function handleShowVersion() {
     color: config.themeColor,
     content: `现在是 ${config.upTime} 更新的 ${config.version}`,
   })
+}
+
+function initCatSounds() {
+  for (let i = 0; i < 6; i++) {
+    const id = `cat00${i + 1}`
+    sound.add(id, {
+      url: `/l2d/cat/${id}.mp3`,
+      volume: 5,
+      loop: false,
+    })
+  }
+}
+
+initCatSounds()
+
+const playCatId = ref<string>("cat001")
+
+function handlePlayCatSound() {
+  sound.stop(playCatId.value)
+  const random = Math.floor(Math.random() * 6) + 1
+  playCatId.value = `cat00${random}`
+  sound.play(playCatId.value)
 }
 </script>
 
