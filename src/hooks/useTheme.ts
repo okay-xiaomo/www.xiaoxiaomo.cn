@@ -11,7 +11,7 @@ export interface IThemeOptions {
  * 使用主题
  * @param {IThemeOptions} options 主题配置
  * */
-export const useTheme = (options?: IThemeOptions) => {
+const useTheme = (options?: IThemeOptions) => {
   const { defaultTheme = DEFAULT_THEME } = options || {}
   const currentTheme = ref<string>(defaultTheme)
 
@@ -47,3 +47,5 @@ export const useTheme = (options?: IThemeOptions) => {
     applyTheme,
   }
 }
+
+export default useTheme

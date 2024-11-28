@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="flex-g">
     <div
       class="bgBox"
       v-motion
@@ -78,12 +78,14 @@
     </div>
 
     <div class="footer flex items-center justify-center gap-x-1">
-      <span>2022-2024</span>
+      <span>2022-{{ currentYear }}</span>
       <a href="/" target="_self" :title="config.author">{{ config.author }}</a>
       <span>丨</span>
       <a href="https://beian.miit.gov.cn/" target="_blank">{{ config.icp }}</a>
       <span>丨</span>
-      <a target="_blank" title="51la网站统计" href="https://v6.51.la/s/GPZ3G9xLtawiqLD"><img class="s-51la-image" src="https://sdk.51.la/icon/1-1.png"></a>
+      <a target="_blank" title="51la网站统计" href="https://v6.51.la/s/GPZ3G9xLtawiqLD"
+        ><img class="s-51la-image" src="https://sdk.51.la/icon/1-1.png"
+      /></a>
     </div>
 
     <!--  弹窗信息  -->
@@ -166,16 +168,12 @@
 <script setup lang="ts">
 import { onMounted, reactive, ref } from 'vue'
 import { VsNotification } from 'vuesax-alpha'
-import { useTheme } from '@/hooks/theme'
+import useTheme from '@/hooks/useTheme'
 import { sound } from '@pixi/sound'
-
-interface ISound {
-  id: string
-  path: string
-  volume: number
-}
+// import useCheckUpdate from '@/hooks/useVersion'
 
 const { currentTheme, setTheme } = useTheme()
+// useCheckUpdate()
 
 const techHidden = ref(true)
 const aboutHidden = ref(true)
@@ -238,6 +236,7 @@ const avatars = ref([
     content: 'Github',
   },
 ])
+const currentYear = ref(new Date().getFullYear())
 
 const bgmConfig = ref({
   current: 'sound2',
@@ -363,7 +362,7 @@ function initCatSounds() {
 
 initCatSounds()
 
-const playCatId = ref<string>("cat001")
+const playCatId = ref<string>('cat001')
 
 function handlePlayCatSound() {
   sound.stop(playCatId.value)
@@ -396,7 +395,7 @@ function handlePlayCatSound() {
   }
 }
 
-.s-51la-image{
+.s-51la-image {
   width: 50px;
 }
 </style>
