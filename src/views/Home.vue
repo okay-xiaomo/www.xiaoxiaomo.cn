@@ -188,7 +188,7 @@ const btnList = ref([
     icon: 'icon-wodeboke',
     animate: '博客',
     color: '#fe8599',
-    href: 'https://blog.925i.cn/',
+    href: 'https://blog.xiaoxiaomo.cn/',
   },
   {
     icon: 'icon-github',
