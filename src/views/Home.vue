@@ -83,6 +83,10 @@
       <span>丨</span>
       <a href="https://beian.miit.gov.cn/" target="_blank">{{ config.icp }}</a>
       <span>丨</span>
+      <a class="link-ga" href="https://beian.mps.gov.cn/#/query/webSearch?code=44030002007558" target="_blank">
+       <img class="logo-ga" src="@/assets/icons/logo-ga.png"/> 粤公网安备44030002007558号
+      </a>
+      <span>丨</span>
       <a target="_blank" title="51la网站统计" href="https://v6.51.la/s/GPZ3G9xLtawiqLD"
         ><img class="s-51la-image" src="https://sdk.51.la/icon/1-1.png"
       /></a>
@@ -397,5 +401,18 @@ function handlePlayCatSound() {
 
 .s-51la-image {
   width: 50px;
+}
+
+.link-ga{
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo-ga{
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  margin-right: 4px;
+  vertical-align: middle;
 }
 </style>
