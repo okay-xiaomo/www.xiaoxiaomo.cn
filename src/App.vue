@@ -20,20 +20,20 @@ function handleShowNotify() {
   nextTick(async () => {
     await sleep(3000)
 
-    const notify = new Notify({
-      title: '站长推荐',
-      body: 'uni-halo 免费开源，点击图片查看。',
-      badge: '/logo.png',
-      icon: '/logo.png',
-      image: 'https://uni-halo.925i.cn/images/uni-halo2.x.jpg',
-      requireInteraction: !localStorage.getItem(notify_show),
-      autoClose: false,
-      onclick: () => {
-        window.open('https://uni-halo.925i.cn/')
-      },
-    })
+    // const notify = new Notify({
+    //   title: '站长推荐',
+    //   body: 'uni-halo 免费开源，点击图片查看。',
+    //   badge: '/logo.png',
+    //   icon: '/logo.png',
+    //   image: 'https://uni-halo.925i.cn/images/uni-halo2.x.jpg',
+    //   requireInteraction: !localStorage.getItem(notify_show),
+    //   autoClose: false,
+    //   onclick: () => {
+    //     window.open('https://uni-halo.925i.cn/')
+    //   },
+    // })
 
-    notify.show()
+    // notify.show()
     sessionStorage.setItem(notify_show, 'visible')
     localStorage.setItem(notify_show, 'visible')
   })

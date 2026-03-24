@@ -83,8 +83,12 @@
       <span>丨</span>
       <a href="https://beian.miit.gov.cn/" target="_blank">{{ config.icp }}</a>
       <span>丨</span>
-      <a class="link-ga" href="https://beian.mps.gov.cn/#/query/webSearch?code=44030002007558" target="_blank">
-       <img class="logo-ga" src="@/assets/icons/logo-ga.png"/> 粤公网安备44030002007558号
+      <a
+        class="link-ga"
+        href="https://beian.mps.gov.cn/#/query/webSearch?code=44030002007558"
+        target="_blank"
+      >
+        <img class="logo-ga" src="@/assets/icons/logo-ga.png" /> 粤公网安备44030002007558号
       </a>
       <span>丨</span>
       <a target="_blank" title="51la网站统计" href="https://v6.51.la/s/GPZ3G9xLtawiqLD"
@@ -174,6 +178,7 @@ import { onMounted, reactive, ref } from 'vue'
 import { VsNotification } from 'vuesax-alpha'
 import useTheme from '@/hooks/useTheme'
 import { sound } from '@pixi/sound'
+import authorAvatar from  '@/assets/logo.png'
 // import useCheckUpdate from '@/hooks/useVersion'
 
 const { currentTheme, setTheme } = useTheme()
@@ -269,10 +274,10 @@ const config = reactive({
   gridCols: 5,
   active: false,
   author: '小莫唐尼',
-  avatar: 'https://blog.925i.cn/upload/avatar.jpg',
+  avatar: authorAvatar,
   description: '小莫唐尼，一个爱凑热闹，喜欢捣鼓前端的程序员！',
   keywords: ['小莫唐尼', '小莫', '小莫唐尼的博客', '小莫唐尼的前端博客'],
-  logo: 'https://blog.925i.cn/upload/avatar.jpg',
+  logo: authorAvatar,
   icp: '桂ICP备17000465号-4',
   copyright: 'Copyright © 2024 ',
   websites: [
@@ -403,12 +408,12 @@ function handlePlayCatSound() {
   width: 50px;
 }
 
-.link-ga{
+.link-ga {
   display: inline-flex;
   align-items: center;
 }
 
-.logo-ga{
+.logo-ga {
   width: 16px;
   height: 16px;
   object-fit: contain;
