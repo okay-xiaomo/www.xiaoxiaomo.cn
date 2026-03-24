@@ -17,7 +17,9 @@ import 'vuesax-alpha/theme-chalk/dark/css-vars.css'
 
 import DisableDevtool from 'disable-devtool'
 
-DisableDevtool()
+if(import.meta.env.PROD){
+  DisableDevtool()
+}
 
 const app = createApp(App)
 

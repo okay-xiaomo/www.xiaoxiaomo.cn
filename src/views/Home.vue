@@ -90,10 +90,10 @@
       >
         <img class="logo-ga" src="@/assets/icons/logo-ga.png" /> 粤公网安备44030002007558号
       </a>
-      <span>丨</span>
-      <a target="_blank" title="51la网站统计" href="https://v6.51.la/s/GPZ3G9xLtawiqLD"
-        ><img class="s-51la-image" src="https://sdk.51.la/icon/1-1.png"
-      /></a>
+<!--      <span>丨</span>-->
+<!--      <a target="_blank" title="51la网站统计" href="https://v6.51.la/s/GPZ3G9xLtawiqLD"-->
+<!--        ><img class="s-51la-image" src="https://sdk.51.la/icon/1-1.png"-->
+<!--      /></a>-->
     </div>
 
     <!--  弹窗信息  -->
@@ -178,7 +178,7 @@ import { onMounted, reactive, ref } from 'vue'
 import { VsNotification } from 'vuesax-alpha'
 import useTheme from '@/hooks/useTheme'
 import { sound } from '@pixi/sound'
-import authorAvatar from  '@/assets/logo.png'
+import authorAvatar from '@/assets/logo.png'
 // import useCheckUpdate from '@/hooks/useVersion'
 
 const { currentTheme, setTheme } = useTheme()
@@ -310,6 +310,11 @@ function getSiteConfig() {
     .then((res) => res.json())
     .then((res) => {
       Object.assign(config, res)
+
+      // LOGO 和 avatar 使用本地头像
+      config.avatar = authorAvatar
+      config.logo = authorAvatar
+
       document.title = res.author
     })
     .catch((error) => {
